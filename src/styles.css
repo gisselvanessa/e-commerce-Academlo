@@ -7,7 +7,7 @@
       --Text1: rgb(142, 141, 141);
       --Text2: rgb(214, 211, 211);
       --Text3: rgb(255, 255, 255);
-      --btn: rgb(161, 160, 160);
+      --btn: rgb(199, 197, 197);
       --btn2: black;
       --textBtn: white;
       --BGnav: rgb(20, 21, 31);
@@ -16,6 +16,7 @@
       --Shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
       --footerBG: rgb(28, 31, 31);
       --footer:rgb(142, 141, 141);
+      --logo: rgb(94, 193, 210);
 }
 *{
       margin: 0;
@@ -31,7 +32,7 @@ body.darkmode{
       --Text1: rgb(142, 141, 141);
       --Text2: rgb(83, 81, 81);
       --Text3: black;
-      --btn: rgb(161, 160, 160);
+      --btn:rgb(161, 160, 160);
       --btn2: black;
       --textBtn: white;
       --BGcard: white;
@@ -40,6 +41,7 @@ body.darkmode{
       --Shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
       --footerBG: rgb(222, 225, 225);
       --footer: rgb(161, 160, 160);
+      --logo: rgb(238, 59, 59);
       
 }
 .load {
@@ -59,6 +61,7 @@ body.darkmode{
       width: 100px;
       height: 100px;
       border-radius: 50%;
+      fill: var(--Hover);
       animation: loadingAnimation 1s infinite;
 }
 
@@ -155,10 +158,14 @@ header .nav__logo{
       gap: 1rem;
       margin-right: 15px;
       cursor: pointer;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 1px;
 
 }
 .nav__logo >svg{
       width: 50px;
+      fill: var(--logo);
       
 }
 /* .nav__logo-icon{
@@ -235,8 +242,10 @@ header .nav__logo{
 }
 .home__price{
       display: block;
-      font-size: 22px;
+      font-size: 26px;
+      font-weight: 600;
       margin: 0px 0px 48px;
+      color: var(--logo);
 }
 /* .home__btns{
       font-size: 16px;
@@ -255,7 +264,9 @@ header .nav__logo{
       background-color: var(--btn2);
       color: var(--textBtn);
       border: none;
-      padding: 1.5rem 2rem
+      padding: 1.5rem 2rem;
+      font-weight: 500;
+      font-size: 17px;
 }
 .button--small{
       padding:1rem 1.5rem
