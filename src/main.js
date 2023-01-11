@@ -11,6 +11,12 @@ window.addEventListener("scroll", function(){
       console.log("scrolling ");
 })
 
+const change=document.querySelector(".bx-moon");
+change.addEventListener("click", function(){
+    console.log('change theme');
+    change.classList.toggle("bx-sun");
+    document.body.classList.toggle("darkmode");
+})
 
 
 
