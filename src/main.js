@@ -57,11 +57,36 @@ change.addEventListener("click", function(){
     change.classList.toggle("bx-sun");
     document.body.classList.toggle("darkmode");
 })
+////menu
+const iconMenu = document.querySelector(".bx-grid-alt");
+const menu = document.querySelector(".menu");
+function showMenu() {
+      
+      
+      iconMenu.addEventListener("click", function () {
+      console.log("click hamburguer");
+      menu.classList.toggle("menu__show");
+      });
+
+}
+showMenu();
 
 //cart
 const productsContent = document.querySelector(".products__content");
 const cartProducts= document.querySelector(".cart__container");
+const amountCart= document.querySelector(".count");
+
 let objCart= {};
+function printAmountCart(){
+    let sum=0;
+    const arrayCart= Object.values(objCart);
+
+    arrayCart.forEach(function({amount}){
+        sum+=amount;
+    })
+    amountCart.textContent=sum;
+   
+}
 
 function printProductsInCart(){
     let html='';
@@ -165,7 +190,8 @@ function printTotal(){
 
 const iconCart = document.querySelector(".bx-shopping-bag")
 const contentCart = document.querySelector(".cart");
-const iconX = document.querySelector(".bx-x");
+const iconX = document.querySelector(".cart__close");
+const iconXmenu = document.querySelector(".cart__close__menu");
 const addToCart= document.querySelector(".home__button");
 
 
@@ -192,7 +218,17 @@ addToCart.addEventListener("click", function(){
             return product.id===id;
         });
     if(objCart[id]){
-            objCart[id].amount++;
+                let findProduct=products.find(function (product) {
+                    return product.id===id;
+                });
+
+                if(findProduct.stock === objCart[id].amount){
+                    alert('No tengo mas en stock');
+                }
+                else{
+                    objCart[id].amount++;
+                }
+            // objCart[id].amount++;
             }
         
         else{
@@ -204,11 +240,16 @@ addToCart.addEventListener("click", function(){
     printProductsInCart();
     printTotal();
     printTotalItems();
+    printAmountCart();
 });
 
 iconX.addEventListener("click", function () {
     contentCart.classList.toggle("show-cart");
-    console.log('click X');
+    console.log('click X cart');
+});
+iconXmenu.addEventListener("click", function () {
+    menu.classList.toggle("menu__show");
+    console.log('click X menu');
 });
 
 //productos en carrito
@@ -230,7 +271,18 @@ productsContent.addEventListener("click", function(e) {
 
 //****************logica del carrito
         if(objCart[id]){
-            objCart[id].amount++;
+                let findProduct=products.find(function (product) {
+                    return product.id===id;
+                });
+
+                if(findProduct.stock === objCart[id].amount){
+                    alert('No tengo mas en stock');
+                }
+                else{
+                    objCart[id].amount++;
+                }
+                
+            // objCart[id].amount++;
             }
         
         else{
@@ -244,6 +296,7 @@ productsContent.addEventListener("click", function(e) {
     printProductsInCart();
     printTotal();
     printTotalItems();
+    printAmountCart();
 });
 //funcionalidades botones +-
 cartProducts.addEventListener("click",function(e){
@@ -263,6 +316,7 @@ cartProducts.addEventListener("click",function(e){
         let findProduct=products.find(function (product) {
             return product.id===id;
         });
+
         if(findProduct.stock === objCart[id].amount){
             alert('No tengo mas en stock');
         }
@@ -279,6 +333,7 @@ cartProducts.addEventListener("click",function(e){
     printProductsInCart();
     printTotal();
     printTotalItems();
+    printAmountCart();
 })
 
 contentCart.addEventListener("click", function (e) {
