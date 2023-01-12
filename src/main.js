@@ -80,7 +80,11 @@ let objCart= {};
 function printAmountCart(){
     let sum=0;
     const arrayCart= Object.values(objCart);
-
+    if(!arrayCart.length){
+        amountCart.style.display="none";
+        return;
+    }
+    amountCart.style.display="";
     arrayCart.forEach(function({amount}){
         sum+=amount;
     })
@@ -371,7 +375,7 @@ contentCart.addEventListener("click", function (e) {
 printProducts();
 printTotal();
 printTotalItems();
-
+printAmountCart();
 
 
 
