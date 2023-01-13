@@ -404,7 +404,7 @@ header .nav__logo{
 }
 .products__button{
       background-color: var(--bgButton);
-      padding: 0.8rem;
+      /* padding: 0.8rem; */
       border: none;
       border-radius: 50%;
       box-shadow: var(--Shadow);
@@ -424,6 +424,10 @@ header .nav__logo{
       cursor: pointer;
       left: 0;
       top: 0;
+      padding: 0.8rem;
+}
+.cart__container .products__data .products__button .bx-plus{
+      padding: 0;
 }
 .footer{
       background-color: var(--footerBG);
