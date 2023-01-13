@@ -172,6 +172,7 @@ header .nav__logo{
 }
 .nav__shop{
       position: relative;
+      cursor: pointer;
       /* background-color: blue; */
 }
 .count{
@@ -384,23 +385,6 @@ header .nav__logo{
 }
 
 
-
-@keyframes bounce {
-      0% {
-            transform: translateY(0);
-      }
-
-      50% {
-            transform: translateY(-20px);
-      }
-
-      100% {
-            transform: translateY(0);
-      }
-}
-
-
-
 .products__data{
       padding: 2rem;
 }
@@ -546,6 +530,9 @@ header .nav__logo{
       width: 60%;
 }
 
+.cart__container .products__card{
+      max-width: 400px;
+}
 .bx-minus{
       font-size: 24px;
       cursor: pointer;

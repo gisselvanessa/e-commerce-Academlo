@@ -354,7 +354,7 @@ contentCart.addEventListener("click", function (e) {
 
         products = newArray;
         objCart = {};
-
+        printAmountCart();
         printProducts();
         printProductsInCart();
         printTotalItems();
@@ -364,11 +364,11 @@ contentCart.addEventListener("click", function (e) {
 });
 
 
-
+printAmountCart();
 printProducts();
 printTotal();
 printTotalItems();
-printAmountCart();
+
 
 mixitup(".products__content",{
     selectors:{
