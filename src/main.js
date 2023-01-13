@@ -192,19 +192,6 @@ const iconXmenu = document.querySelector(".cart__close__menu");
 const addToCart= document.querySelector(".home__button");
 
 
-
-// cartBtn.addEventListener("click", function(){
-//     console.log("click comprar");
-//     const arrayCart = Object.values(objCart);
-//     if(!arrayCart.length){
-//         alert('No hay nada en el carrito:\'c')
-//         cartBtn.innerHTML=``;
-//     }
-//     else{
-//         alert("YA COMPRASTE! Felicidades!");
-//     }
-// });
-
 iconCart.addEventListener("click", function () {
     contentCart.classList.toggle("show-cart");
     console.log('click Carrito');
@@ -360,6 +347,7 @@ contentCart.addEventListener("click", function (e) {
         printTotalItems();
         printTotal();
 
+        
     }
 });
 
@@ -378,6 +366,8 @@ mixitup(".products__content",{
         duration:300,
     },
 })
+
+
 
 
 
