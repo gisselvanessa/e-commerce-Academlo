@@ -490,6 +490,7 @@ header .nav__logo{
       height: 100vh;
       /* height: calc(100vh -50px) */
       width: 40vw;
+      /* max-width: 40vw; */
       top:0;
       right: 0;
       position: fixed;
@@ -665,7 +666,7 @@ header .nav__logo{
       color: var(--btn2);
       right: 0;
       height: 100%;
-      width: 40%;
+      width: 100%;
       padding: 1rem;
       text-align: center;
       top: 0;
@@ -692,10 +693,13 @@ header .nav__logo{
       right: 0;
 }     
 
+
+
 @media (max-width:900px){
       /* .grid{
             grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));
       } */
+      
       .nav__toggle{
             display: block;
       }
@@ -745,16 +749,17 @@ header .nav__logo{
             /* margin: 0; */
             /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
       /* } */
+}
 
-}
-@media (min-width:900px) {
-      
-}
 
 @media (max-width:500px) {
       .footer__container {
                   grid-template-columns: repeat(1, minmax(150px, 1fr));
                   gap: 4rem;
+            }
+            .cart {
+                  /* height: calc(100vh -50px) */
+                  width: 100%;
             }
             
 }
