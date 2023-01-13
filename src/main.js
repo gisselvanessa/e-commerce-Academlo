@@ -1,15 +1,8 @@
-mixitup(".products__content",{
-    selectors:{
-        target: ".products__card",
-    },
-    animation:{
-        duration:300,
-    },
-})
+
 let products=[
     {
         id:"0",
-        name:"Hoddies",
+        name:"Hoodies",
         price:14.00,
         stock:3,
         urlImage: "./img/featured1.png"
@@ -376,6 +369,15 @@ printProducts();
 printTotal();
 printTotalItems();
 printAmountCart();
+
+mixitup(".products__content",{
+    selectors:{
+        target: ".products__card",
+    },
+    animation:{
+        duration:300,
+    },
+})
 
 
 
